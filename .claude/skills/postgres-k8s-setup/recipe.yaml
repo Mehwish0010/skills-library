@@ -1,0 +1,19 @@
+title: PostgreSQL Kubernetes Setup
+description: Deploy PostgreSQL on Kubernetes and run database migrations
+instructions:
+  - Deploy PostgreSQL using Helm chart
+  - Run database migrations for LearnFlow schema
+  - Verify database connectivity and schema
+activities:
+  - name: deploy
+    description: Deploy PostgreSQL to Kubernetes
+    command: bash scripts/deploy.sh
+  - name: migrate
+    description: Run database migrations
+    command: python scripts/migrate.py
+  - name: verify
+    description: Verify PostgreSQL is healthy
+    command: python scripts/verify.py
+extensions:
+  - name: kubernetes
+    command: kubectl

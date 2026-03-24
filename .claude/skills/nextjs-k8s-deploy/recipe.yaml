@@ -1,0 +1,25 @@
+title: Next.js Kubernetes Deploy
+description: Deploy Next.js frontend application with Monaco editor on Kubernetes
+instructions:
+  - Scaffold Next.js app with Monaco editor integration
+  - Build production Docker image
+  - Deploy to Kubernetes cluster
+  - Verify frontend is accessible
+activities:
+  - name: scaffold
+    description: Scaffold Next.js application
+    command: python scripts/scaffold.py
+  - name: build
+    description: Build Docker image
+    command: bash scripts/build.sh
+  - name: deploy
+    description: Deploy to Kubernetes
+    command: bash scripts/deploy.sh
+  - name: verify
+    description: Verify deployment
+    command: python scripts/verify.py
+extensions:
+  - name: kubernetes
+    command: kubectl
+  - name: docker
+    command: docker

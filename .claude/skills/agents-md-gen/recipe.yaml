@@ -1,0 +1,13 @@
+title: AGENTS.md Generator
+description: Generate AGENTS.md files that describe repository structure and conventions for AI coding agents
+instructions:
+  - Analyze the repository structure and codebase
+  - Generate comprehensive AGENTS.md with conventions, patterns, and guidelines
+  - Validate the generated file covers all key sections
+activities:
+  - name: analyze
+    description: Analyze repository structure
+    command: python scripts/analyze_repo.py
+  - name: generate
+    description: Generate AGENTS.md file
+    command: python scripts/generate_agents_md.py

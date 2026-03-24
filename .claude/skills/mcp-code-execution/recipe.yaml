@@ -1,0 +1,13 @@
+title: MCP Code Execution
+description: Implement MCP with code execution pattern for token-efficient agent operations
+instructions:
+  - Create MCP wrapper that executes code instead of loading tools into context
+  - Implement script-based MCP calls that return minimal results
+  - Test the wrapper to verify token efficiency
+activities:
+  - name: create-wrapper
+    description: Create MCP code execution wrapper
+    command: python scripts/create_mcp_wrapper.py
+  - name: test
+    description: Test MCP wrapper
+    command: python scripts/test_wrapper.py

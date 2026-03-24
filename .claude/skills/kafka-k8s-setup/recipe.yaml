@@ -1,0 +1,19 @@
+title: Kafka Kubernetes Setup
+description: Deploy Apache Kafka on Kubernetes using Helm charts
+instructions:
+  - Run deployment script to install Kafka via Helm
+  - Verify all Kafka pods are in Running state
+  - Create required topics for LearnFlow event streaming
+activities:
+  - name: deploy
+    description: Deploy Kafka to Kubernetes
+    command: bash scripts/deploy.sh
+  - name: verify
+    description: Verify Kafka pods are running
+    command: python scripts/verify.py
+  - name: create-topics
+    description: Create Kafka topics for LearnFlow
+    command: python scripts/create_topics.py
+extensions:
+  - name: kubernetes
+    command: kubectl

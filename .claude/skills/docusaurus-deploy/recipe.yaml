@@ -1,0 +1,23 @@
+title: Docusaurus Deploy
+description: Deploy Docusaurus documentation site for LearnFlow on Kubernetes
+instructions:
+  - Scaffold Docusaurus site with LearnFlow documentation structure
+  - Build production Docker image
+  - Deploy to Kubernetes cluster
+  - Verify documentation site is accessible
+activities:
+  - name: scaffold
+    description: Scaffold Docusaurus site
+    command: python scripts/scaffold.py
+  - name: build
+    description: Build Docker image
+    command: bash scripts/build.sh
+  - name: deploy
+    description: Deploy to Kubernetes
+    command: bash scripts/deploy.sh
+  - name: verify
+    description: Verify documentation site
+    command: python scripts/verify.py
+extensions:
+  - name: kubernetes
+    command: kubectl

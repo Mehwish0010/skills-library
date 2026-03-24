@@ -1,0 +1,28 @@
+title: FastAPI Dapr Agent
+description: Create FastAPI microservices with Dapr sidecar and AI agent capabilities
+instructions:
+  - Scaffold a new FastAPI service with Dapr integration
+  - Generate Dapr component configurations for pub/sub and state
+  - Build Docker image and deploy to Kubernetes
+  - Verify service health and Dapr sidecar connectivity
+activities:
+  - name: scaffold
+    description: Scaffold new FastAPI agent service
+    command: python scripts/scaffold_service.py
+  - name: dapr-components
+    description: Generate Dapr component configs
+    command: python scripts/generate_dapr_components.py
+  - name: build
+    description: Build Docker image
+    command: bash scripts/build.sh
+  - name: deploy
+    description: Deploy to Kubernetes
+    command: bash scripts/deploy.sh
+  - name: verify
+    description: Verify service health
+    command: python scripts/verify.py
+extensions:
+  - name: kubernetes
+    command: kubectl
+  - name: docker
+    command: docker
